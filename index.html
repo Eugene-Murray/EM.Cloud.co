@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--#include file="templates/_html-head.html" -->
+</head>
+
+<body id="home">
+<!--#include file="templates/_header.html" -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron alternate">
+        <h1>Eugene Murray</h1>
+        <h3>Html5 | Javascript | CSS3 | C# | Azure</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- portfolio carousel //-->
+<div id="carousel-portfolio" class="carousel slide home-gallery" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="center">
+        <a href="#"><img src="assets/img/home-imac.png" width="573" height="450" alt="iMac" /></a>
+        <div class="carousel-caption">
+          <h3 id="test"><a href="#">Cardeo Creative</a></h3>
+          <p>Website for Cardeo Creative</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-ipod.png" width="635" height="450" alt="iPod" />
+        <div class="carousel-caption">
+          <h3 id="test"><a href="#">Oneyedjacks</a></h3>
+          <p>Album Artwork</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-ipad.png" width="353" height="450" alt="iPad" />
+        <div class="carousel-caption">
+          <h3 id="test"><a href="#">Reeder</a></h3>
+          <p>WordPress Theme</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-macair.png" width="841" height="450" alt="macBook Air" />
+        <div class="carousel-caption">
+          <h3 id="test"><a href="#">Reskee</a></h3>
+          <p>Reskee Email Newsletter</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-iphone.png" width="236" height="450" alt="iPhone" />
+        <div class="carousel-caption">
+          <h3 id="test"><a href="#">Just Like Anything</a></h3>
+          <p>iPhone Wallpaper</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-portfolio" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-portfolio" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row services">
+    <div class="col-md-4 center block border-bottom">
+      <h3>Web Design</h3>
+      <i class="fa fa-desktop"></i>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="col-md-4 center block border-bottom">
+      <h3>Print Design</h3>
+      <i class="fa fa-pencil"></i>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="col-md-4 center block">
+      <h3>App Development</h3>
+      <i class="fa fa-mobile"></i>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+
+<!-- portfolio carousel //-->
+<div id="carousel-reviews" class="carousel slide home-reviews" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-reviews" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-reviews" data-slide-to="1"></li>
+    <li data-target="#carousel-reviews" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="container center">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="home-review">
+            <h3>"I'm sick of following my dreams. I'm just going to ask them where they're goin', and hook up with them later."</h3>
+            <h4>Mitch Hedberg</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="container center">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="home-review">
+            <h3>"I love blackjack. But I'm not addicted to gambling. I'm addicted to sitting in a semi circle."</h3>
+            <h4>Mitch Hedberg</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+        <div class="container center">
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="home-review">
+              <h3>"The depressing thing about tennis is that no matter how good I get, I'll never be as good as a wall."</h3>
+              <h4>Mitch Hedberg</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="templates/_footer.html" -->
+
+<script src="assets/js/jquery-1.8.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+$('.carousel').carousel({
+  interval: 6000
+})
+</script>
+
+</body>
+</html>
+

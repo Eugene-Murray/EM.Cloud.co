@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--#include file="templates/_html-head.html" -->
+</head>
+
+<body id="portfolio-item">
+<!--#include file="templates/_header.html" -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+        <h1>Item Name</h1>
+        <h3>Totally rad short description of item</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1">
+          <h5 class="alternate">Date: October 2013</h5>
+          <p>Website<br />
+          <a href="http://cardeo.ca">Visit Website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- container end //-->
+
+<!-- portfolio carousel //-->
+<div id="carousel-example-generic" class="carousel slide home-gallery" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="center">
+        <img src="assets/img/home-imac.png" width="573" height="450" alt="iMac" />
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-imac.png" width="573" height="450" alt="iMac" />
+      </div>
+    </div>
+    <div class="item">
+      <div class="center">
+        <img src="assets/img/home-imac.png" width="573" height="450" alt="iMac" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<!-- portfolio carousel //-->
+<div id="carousel-example-generic2" class="carousel slide home-reviews" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="container center">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="home-review">
+            <h3>"I'm sick of following my dreams. I'm just going to ask them where they're goin', and hook up with them later."</h3>
+            <h4>Mitch Hedberg</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="container center">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="home-review">
+            <h3>"I love blackjack. But I'm not addicted to gambling. I'm addicted to sitting in a semi circle."</h3>
+            <h4>Mitch Hedberg</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+        <div class="container center">
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="home-review">
+              <h3>"The depressing thing about tennis is that no matter how good I get, I'll never be as good as a wall."</h3>
+              <h4>Mitch Hedberg</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="templates/_footer.html" -->
+
+<script>
+$('.carousel').carousel({
+  interval: 6000
+})
+</script>
+
+</body>
+</html>
+
