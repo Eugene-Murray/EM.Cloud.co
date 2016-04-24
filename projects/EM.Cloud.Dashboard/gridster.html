@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Angular Gridster</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width" />
+
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/angular-gridster.min.css" />
+	<link id="loadBefore" href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/grid-style.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+	<script src="https://code.angularjs.org/1.2.15/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+	<script src="js/ui-router/angular-ui-router.min.js"></script>
+	<script src="js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+	<script src="js/angular/angular-gridster.js"></script>
+
+
+	<script type="text/javascript">
+		(function() {
+			angular.module('inspinia', ['gridster', 'ui.bootstrap', 'ngRoute'])
+				.config([
+					function() {
+//						$routeProvider
+//							.when('/main', {
+//								templateUrl: 'demo/main/view.html',
+//								controller: 'MainCtrl'
+//							})
+//							.when('/dashboard', {
+//								templateUrl: 'demo/dashboard/view.html',
+//								controller: 'DashboardCtrl'
+//							})
+//							.otherwise({
+//								redirectTo: '/main'
+//							});
+					}
+				])
+//				.controller('RootCtrl', function($scope) {
+//
+//					$scope.value = "Test";
+//
+////					$scope.$on('$locationChangeStart', function(e, next, current) {
+////						$scope.page = next.split('/').splice(-1);
+////						$scope.styleUrl = 'demo/' + $scope.page + '/style.css'
+////					});
+//				});
+		})();
+	</script>
+
+	<script src="js/app.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/dashboad.script.js"></script>
+
+</head>
+
+<body ng-app="em.cloud.dashboard">
+<div ng-controller="DashboardCtrl">
+
+
+	<!--<div class="slide-animate" ng-include="template.url"></div>-->
+
+
+	<!--<div class="container" ng-view></div>-->
+
+
+
+	<!-- Wrapper-->
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<div ng-include="'views/common/navigation.html'"></div>
+
+		<!-- Page wraper -->
+		<!-- ng-class with current state name give you the ability to extended customization your view -->
+		<div id="page-wrapper" class="gray-bg">
+
+			<!-- Page wrapper -->
+			<div ng-include="'views/common/topnavbar.html'"></div>
+
+
+
+			<!-- Gridster -->
+
+			<div class="page-header">
+				<a class="pull-right btn btn-primary" ng-click="addWidget()"><i class="glyphicon glyphicon-plus"></i> Add Widget</a>
+				<a class="pull-right btn btn-warning" ng-click="clear()"><i class="glyphicon glyphicon-trash"></i> Clear</a>
+				<h1 style="display: inline-block; width: 200px;">Dashboard</h1>
+				<select class="form-control" style="width: 150px; margin-bottom: 20px; display:inline-block;" ng-change="changeDashboard()" ng-model="selectedDashboardId" ng-options="d.id as d.name for d in dashboards | object2Array | orderBy:'id'">
+				</select>
+			</div>
+
+			<div gridster="gridsterOptions">
+				<ul>
+					<li gridster-item="widget" ng-repeat="widget in dashboard.widgets">
+						<div class="box" ng-controller="CustomWidgetCtrl">
+							<div class="box-header">
+								<h3>{{ widget.name }}</h3>
+								<div class="box-header-btns pull-right">
+									<a title="settings" ng-click="openSettings(widget)"><i class="glyphicon glyphicon-cog"></i></a>
+									<a title="Remove widget" ng-click="remove(widget)"><i class="glyphicon glyphicon-trash"></i></a>
+								</div>
+							</div>
+							<div class="box-content">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+
+		<!-- ../ Gridster -->
+
+			<!-- Footer -->
+			<div ng-include="'views/common/footer.html'"></div>
+
+		</div>
+		<!-- End page wrapper-->
+
+	</div>
+	<!-- End wrapper-->
+
+
+
+!-- jQuery and Bootstrap -->
+<script src="js/jquery/jquery-2.1.1.min.js"></script>
+<script src="js/plugins/jquery-ui/jquery-ui.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- MetsiMenu -->
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+<!-- SlimScroll -->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Peace JS -->
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/em.cloud.dashboard.js"></script>
+
+
+<script src="js/directives.js"></script>
+
+
+
+</body>
+
+</html>

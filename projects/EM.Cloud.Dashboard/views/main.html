@@ -1,0 +1,57 @@
+
+
+<!-- Gridster -->
+
+	<div class="row">
+		<div class="col-lg-12">
+
+<div class="page-header">
+    <a class="pull-right btn btn-primary" ng-click="vm.addWidget()"><i class="glyphicon glyphicon-plus"></i> Add Widget</a>
+    <a class="pull-right btn btn-warning" ng-click="vm.clear()"><i class="glyphicon glyphicon-trash"></i> Clear</a>
+    <h1 style="display: inline-block; width: 200px;">Dashboard</h1>
+
+
+    <select class="form-control" style="width: 150px; margin-bottom: 20px; display:inline-block;" ng-change="vm.changeDashboard()" ng-model="vm.selectedDashboardId" ng-options="d.id as d.name for d in vm.dashboards | object2Array | orderBy:'id'">
+    </select>
+
+</div>
+
+
+<div gridster="vm.gridsterOptions">
+    <ul>
+        <li gridster-item="widget" ng-repeat="widget in vm.dashboard.widgets">
+            <div class="box" ng-controller="CustomWidgetCtrl">
+                <div class="box-header">
+                    <h3>{{ widget.name }}</h3>
+                    <div class="box-header-btns pull-right">
+                        <a title="settings" ng-click="openSettings(widget)"><i class="glyphicon glyphicon-cog"></i></a>
+                        <a title="Remove widget" ng-click="remove(widget)"><i class="glyphicon glyphicon-trash"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <input type="checkbox" ng-model="IsLoading" />
+                    <div ng-show="IsLoading" class="circle circle1 circle1-1"><div class="circle circle1 circle2-1"><div class="circle circle1 circle3-1"></div></div></div>
+
+
+
+                    <!--<div class="d3container">-->
+                        <!--<h2>D3 Graphic</h2>-->
+                        <div class="chart"></div>
+                    <!--</div>-->
+
+
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+		</div>
+	</div>
+
+
+<!-- ../ Gridster -->
+
+
+
+
+<!--</div>-->
